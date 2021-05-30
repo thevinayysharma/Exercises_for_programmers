@@ -1,0 +1,28 @@
+<!-- Q1] Create a program that prompts for your name and prints a greeting using your name? -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRINT NAME</title>
+</head>
+<body>
+
+    <div id="root"></div>
+ 
+    <!-- Right Way -->
+    <script>
+        var name = prompt("what's your name?, ")
+        document.getElementById("root").innerHTML = "Hi " + name + " !. How are you today!"
+    </script>
+   
+</body>
+</html>
+
+<!-- 
+Another way of doing
+1. Taking userinput in <form> tag and creating an array to store object properties[userinputs] in js file
+ for multiple value, and printing out object value's for diiferent btn clicks.  
+ Refer to https://www.sitepoint.com/community/t/create-object-from-a-form/313057 for more info -->
