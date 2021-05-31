@@ -1,0 +1,35 @@
+<!-- Create a program that prompts for an input string and displays output that shows
+the input string and the number of characters the string contains. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String length</title>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script>
+        var username = prompt("What's your name, user ?" );
+        
+        //checking
+        if( username[0].includes(" ")) {
+            alert("Write Valid Name!");
+        }
+        else {  
+        var logic = username.split(" ").join("");      //it worked finally...whoosh world....used various regex earlier
+        var lengthh = logic.length;
+        document.getElementById("root").innerText = "Hi, " + username + "\n" + " length of your name is: " + lengthh + " characters";     
+        }
+     
+    </script>
+    
+</body>
+</html>
+
+<!-- //trim removes only intial and last trailinng whitespace not in between,
+for regex => /\s+/g  conditon for extra spaces-->
