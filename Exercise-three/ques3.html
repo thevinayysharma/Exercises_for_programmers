@@ -1,0 +1,32 @@
+<!-- Create a program that prompts for a quote and an author.
+Display the quotation and author as shown in the example
+output. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author-Quote ques</title>
+</head>
+<body>
+    <div id="root"></div>
+
+
+    <script>
+        var authorname = prompt("What's your name, author ?", "Alex Brown");
+        var quote = prompt("Write a Quote here!", " Never give up");
+ 
+        //string concatenation
+        document.getElementById("root").innerHTML = authorname + " says, " + " ' " + quote + " .!' " ;
+       
+        //dynamic css styling
+        document.getElementById("root").style.color = "darkorange";
+    </script>
+</body>
+</html>
+
+<!-- other method includes string interpolation usingjquery and string substiution using string.replace() method
+http://craftpip.github.io/jquery-confirm/  for styled prompts using jquery  -->
