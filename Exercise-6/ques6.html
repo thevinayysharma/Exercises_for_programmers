@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiremnet Age</title>
+
+    <style>
+    h1 {
+        color: grey;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    #root {
+    margin: 3rem;
+    padding: 1rem;
+    border: 2px solid hotpink;
+    background-color: aliceblue;
+    }
+    </style>
+</head>
+<body>
+    
+    <h1> Retirement Calculator</h1>
+    <div id="root"></div>
+
+
+    <script>
+     
+     //input
+    let userage = prompt("What's your current Age ?", "25");
+    let retireage = prompt(" At which age would you like to retire", "60");
+
+    //converting string into numbers
+    const user_age = parseInt(userage);
+    const retire_age = parseInt(retireage);
+
+
+    //date in year format
+    let present =  new Date();
+    let today = present.getFullYear();
+    // console.log(today);
+
+    const age = retire_age - user_age  ;
+    const present_year = today;
+    const retire_year = present_year + age;
+
+    //if user has attained the retirement age
+    if( age <= 0 ) {
+        alert("You can already retire");
+        document.getElementById("root").style.display = "none";
+    }
+
+
+    //printing message
+    const message = `You Have ${age}  years left until you can retire.`
+    const retireyear_message = `It's ${present_year} so you can retire in ${retire_year}. `
+
+    document.getElementById("root").innerHTML = message + "<br/>"  +  retireyear_message;
+
+    </script>
+    
+</body>
+</html>

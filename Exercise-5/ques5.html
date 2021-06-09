@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <div id='root'></div>
+
+     <script>
+     
+      var userinput_1 = prompt("Enter first no: ", "20");
+      var userinput_2 = prompt("Enter second no: ", "30");
+ 
+      //converting string into integers
+      let var_one = parseInt(userinput_1);
+      let var_two = parseInt(userinput_2);
+
+
+      //function to implement calculation  :Processing
+      function calculator(x, y) {
+        const array=[];
+        const sum = x+y;
+        const diff= x-y;
+        const mul = x*y;
+        const div = x/y;
+        array.push(sum, diff, mul, div);  //since js function can return only one value, we use array, can use object too, but aray is fine fo this!
+        return array;
+      }
+
+      var result = calculator(var_one, var_two);
+      var converted_result = result.join(",  ")
+
+      document.getElementById("root").innerHTML = "Sum = " + result[0] + "<br>"
+                                                + "diff= " + result[1] + "<br>" 
+                                                + "mul = " + result[2] + "<br>" 
+                                                + "div = " + result[3]; 
+    
+
+     </script>
+
+</body>
+</html>
